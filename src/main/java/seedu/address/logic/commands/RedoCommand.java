@@ -11,8 +11,8 @@ public class RedoCommand extends Command {
 
     public static final String COMMAND_WORD = "redo";
 
-    private static final String MESSAGE_REDO_SUCCESS = "Redo successful\nRemaining undo count: %d";
-    private static final String MESSAGE_REDO_FAILURE = "No commands to redo";
+    public static final String MESSAGE_REDO_SUCCESS = "Redo successful\nRemaining undo count: %d";
+    public static final String MESSAGE_REDO_FAILURE = "No commands to redo";
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
