@@ -1,5 +1,6 @@
 package seedu.address.logic.commands;
 
+import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.exceptions.OperationException;
 
@@ -14,12 +15,12 @@ public class RedoCommand extends Command {
     private static final String MESSAGE_REDO_FAILURE = "No commands to redo";
 
     @Override
-    public CommandResult execute(Model model) {
+    public CommandResult execute(Model model) throws CommandException {
         try {
             int remaining = model.redo();
             return new CommandResult(String.format(MESSAGE_REDO_SUCCESS, remaining));
         } catch (OperationException e) {
-            return new CommandResult(MESSAGE_REDO_FAILURE);
+            throw new CommandException(MESSAGE_REDO_FAILURE);
         }
     }
 
