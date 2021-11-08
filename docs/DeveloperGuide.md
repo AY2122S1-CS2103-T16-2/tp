@@ -370,6 +370,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
     Use case ends.
 
+
 **Extensions**
 
 * 2a. Arguments that should be there is not there
@@ -381,6 +382,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 2b1. ProfBook rejects the command and shows an error message.
 
       Use case ends.
+    
     
 **Use case: Edit a contact**
 
@@ -418,6 +420,21 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
     * 3d1. ProfBook shows an error message.
 
       Use case ends
+
+**Use case: Sort contacts**
+
+MSS
+
+1. User requests to sort contacts
+2. ProfBook checks if input is valid
+3. ProfBook sorts the contacts
+
+**Extensions**
+
+* 2a. Invalid arguments given
+  * 2a1. ProfBook rejects the command and shows an error message.
+  
+    Use case ends
 
 **Use case: Export contacts**
 
@@ -681,6 +698,9 @@ testers are expected to do more *exploratory* testing.
 
 ## Effort
 The difficulty level for our project is at a relatively moderate level. <br>
+
 We did not make large changes to the AB3 but instead chose to enhance the existing features. Most of the challenges faced were from figuring out what could be changed in the AB3 functions and what could not. For example, when implementing the sort feature, there were so many lists in AB3 and some of them were immutable. So we had to do a lot of testing to figure out which lists were mutable and the effects of mutating these lists on the app.<br>
+
 In comparison to AB3, ProfBook was a harder project due to the large amounts of information attached to each contact. Managing all that information and making sure that each of our features work with the information in an intuitive way was one of the bigger achievements of ProfBook.<br>
+
 Another big achievement of the project was how we integrated import and export features to ProfBook so that the information in ProfBook is portable and can be transferred between users easily. And since the output/input file is a JSON file, it could be used in conjunction with other apps as well.
